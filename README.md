@@ -1,4 +1,4 @@
-# Okay-Bank
+# Okay Bank
 
 Okay Bank app
 
