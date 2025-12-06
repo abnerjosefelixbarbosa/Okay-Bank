@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS AGENCY_TB (
+    id VARCHAR NOT NULL,
+    number VARCHAR(5) NOT NULL,
+    bank_id VARCHAR NOT NULL,
+    PRIMARY KEY(id),
+    UNIQUE(number),
+    FOREIGN KEY(bank_id) REFERENCES BANK_TB(id) 
+);
