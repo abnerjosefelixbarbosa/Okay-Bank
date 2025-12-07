@@ -22,15 +22,15 @@ import lombok.NoArgsConstructor;
 public class Employee {
 	@Id
 	private String id;
-	@Column(nullable = false, unique = true, length = 100)
+	@Column(name = "name", nullable = false, unique = true, length = 100)
 	private String name;
-	@Column(nullable = false, unique = true, length = 50)
+	@Column(name = "email", nullable = false, unique = true, length = 50)
 	private String email;
-	@Column(nullable = false, scale = 2, precision = 30)
+	@Column(name = "salary", nullable = false, scale = 2, precision = 30)
 	private BigDecimal salary;
-	@Column(nullable = false, unique = true, length = 30)
+	@Column(name = "phone", nullable = false, unique = true, length = 30)
 	private String phone;
-	@Column(nullable = false)
+	@Column(name = "employee_type", nullable = false)
 	private EmployeeType employeeType;
 	@OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
 	private List<Account> accounts;

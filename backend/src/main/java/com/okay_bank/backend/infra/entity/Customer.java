@@ -22,17 +22,17 @@ import lombok.NoArgsConstructor;
 public class Customer {
 	@Id
 	private String id;
-	@Column(nullable = false, unique = true, length = 100)
+	@Column(name = "name", nullable = false, unique = true, length = 100)
 	private String name;
-	@Column(nullable = false, unique = true, length = 50)
+	@Column(name = "email", nullable = false, unique = true, length = 50)
 	private String email;
-	@Column(nullable = false, unique = true, length = 30)
+	@Column(name = "phone", nullable = false, unique = true, length = 30)
 	private String phone;
-	@Column(nullable = false, unique = true, length = 8)
+	@Column(name = "password", nullable = false, unique = true, length = 8)
 	private String password;
-	@Column(nullable = false)
+	@Column(name = "customer_type", nullable = false)
 	private CustomerType customerType;
-	@Column(nullable = false, unique = true, length = 14)
+	@Column(name = "document", nullable = false, unique = true, length = 14)
 	private String document;
 	@Embedded
 	private Address address;
