@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "card_tb")
-public class Card {
+public class CardEntity {
 	@Id
 	private String id;
 	@Column(name = "cvv", nullable = false, unique = true, length = 3)
@@ -28,5 +28,5 @@ public class Card {
 	private LocalDate expirationDate;
 	@OneToOne
 	@JoinColumn(name = "account_id", nullable = false, unique = true)
-	private Account account;
+	private AccountEntity account;
 }

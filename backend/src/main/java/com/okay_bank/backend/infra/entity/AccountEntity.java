@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "account_tb")
-public class Account {
+public class AccountEntity {
 	@Id
 	private String id;
 	@Column(name = "password", nullable = false, unique = true, length = 6)
@@ -30,13 +30,13 @@ public class Account {
 	private BigDecimal amount;
 	@ManyToOne
 	@JoinColumn(name = "employee_id", nullable = false)
-	private Employee employee;
+	private EmployeeEntity employee;
 	@ManyToOne
 	@JoinColumn(name = "customer_id", nullable = false)
-	private Customer customer;
+	private CustomerEntity customer;
 	@ManyToOne
 	@JoinColumn(name = "agency_id", nullable = false)
-	private Agency agency;
+	private AgencyEntity agency;
 	@OneToOne(mappedBy = "account", cascade = CascadeType.MERGE)
-	private Card card;
+	private CardEntity card;
 }

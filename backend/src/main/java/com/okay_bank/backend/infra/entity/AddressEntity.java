@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Embeddable
-public class Address {
+public class AddressEntity {
 	@Column(name = "address_zip_code", nullable = false, length = 15)
 	private String zipCode;
 	@Column(name = "address_name", nullable = false, length = 30)

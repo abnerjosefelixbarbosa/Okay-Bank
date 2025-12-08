@@ -18,11 +18,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "bank_tb")
-public class Bank {
+public class BankEntity {
 	@Id
 	private String id;
 	@Column(name = "number", nullable = false, unique = true, length = 4)
 	private String number;
 	@OneToMany(mappedBy = "bank", fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
-	private List<Agency> agencies;
+	private List<AgencyEntity> agencies;
 }

@@ -1,6 +1,6 @@
-package com.okay_bank.backend.domain.entity;
+package com.okay_bank.backend.application.domain;
 
-import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -10,12 +10,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
+public class Customer {
 	private String id;
 	private String name;
+	private LocalDate birthDate;
 	private String email;
-	private BigDecimal salary;
 	private String phone;
-	private EmployeeType employeeType;
+	private String password;
+	private CustomerType customerType;
+	private String document;
+	private Address address;
 	private List<Account> accounts;
 }

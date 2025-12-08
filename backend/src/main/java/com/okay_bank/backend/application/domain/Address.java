@@ -1,4 +1,4 @@
-package com.okay_bank.backend.domain.entity;
+package com.okay_bank.backend.application.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

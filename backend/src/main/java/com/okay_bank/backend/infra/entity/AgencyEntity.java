@@ -20,14 +20,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "agency_tb")
-public class Agency {
+public class AgencyEntity {
 	@Id
 	private String id;
 	@Column(name = "number", nullable = false, unique = true, length = 5)
 	private String number;
 	@ManyToOne
 	@JoinColumn(name = "bank_id", nullable = false)
-	private Bank bank;
+	private BankEntity bank;
 	@OneToMany(mappedBy = "agency", fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
-	private List<Account> accounts;
+	private List<AccountEntity> accounts;
 }
