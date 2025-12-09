@@ -21,6 +21,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "employee_tb")
 public class EmployeeEntity {
 	@Id
+	@Column(name = "id")
 	private String id;
 	@Column(name = "name", nullable = false, unique = true, length = 100)
 	private String name;

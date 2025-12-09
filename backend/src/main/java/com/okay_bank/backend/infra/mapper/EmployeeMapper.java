@@ -11,4 +11,6 @@ public interface EmployeeMapper {
 	EmployeeResponseDto mapToDto(Employee employee);
 
 	EmployeeEntity mapToEmployeeEntity(Employee employee);
+	
+	Employee mapToEmployee(EmployeeEntity entity);
 }

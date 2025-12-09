@@ -7,4 +7,5 @@ import com.okay_bank.backend.infra.entity.EmployeeEntity;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, String> {
+	boolean existsByNameOrEmailOrPhone(String name, String email, String phone);
 }

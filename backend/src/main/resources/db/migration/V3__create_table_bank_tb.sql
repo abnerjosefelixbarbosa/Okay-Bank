@@ -1,6 +1,0 @@
-CREATE TABLE IF NOT EXISTS BANK_TB (
-    id VARCHAR NOT NULL,
-    number VARCHAR(4) NOT NULL,
-    PRIMARY KEY(id),
-    UNIQUE(number)
-);

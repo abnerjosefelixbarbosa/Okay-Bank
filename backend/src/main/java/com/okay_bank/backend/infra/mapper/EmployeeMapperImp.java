@@ -24,4 +24,8 @@ public class EmployeeMapperImp implements EmployeeMapper {
 	public EmployeeEntity mapToEmployeeEntity(Employee employee) {
 		return new EmployeeEntity(employee.getId(), employee.getName(), employee.getEmail(), employee.getSalary(), employee.getPhone(), EmployeeEntityType.valueOf(employee.getEmployeeType().name()), null);
 	}
+	
+	public Employee mapToEmployee(EmployeeEntity entity) {
+		return new Employee(entity.getId(), entity.getName(), entity.getEmail(), entity.getSalary(), entity.getPhone(), EmployeeType.valueOf(entity.getEmployeeType().name()), null);
+	}
 }
