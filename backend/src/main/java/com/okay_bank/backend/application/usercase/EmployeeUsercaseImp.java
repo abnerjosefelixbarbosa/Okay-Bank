@@ -14,10 +14,20 @@ public class EmployeeUsercaseImp implements EmployeeUsercase  {
 	private final EmployeeGateway employeeGateway;
 	
 	public Employee registerEmployee(Employee employee) {
+		validateEmployee(employee);
+		return employeeGateway.registerEmployee(employee);
+	}
+	
+	private void validateEmployee(Employee employee) {
+		if (employee.getSalary().scale() != 2) {
+			throw new BusinessException("Salário deve ter 2 digitos.");
+		}
+		if (employee.getSalary().toString().equals("0.00")) {
+			throw new BusinessException("Salário não deve ser 0.");
+		}
 		if (existsByNameOrEmailOrPhone(employee)) {
 			throw new BusinessException("Nome, email ou telefone não deve ser repetido.");
 		}
-		return employeeGateway.registerEmployee(employee);
 	}
 	
 	private boolean existsByNameOrEmailOrPhone(Employee employee) {
