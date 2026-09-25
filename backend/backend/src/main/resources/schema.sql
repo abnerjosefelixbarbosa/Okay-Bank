@@ -1,6 +1,6 @@
 CREATE TABLE agency_tb (
     id VARCHAR PRIMARY KEY,
-    number VARCHAR(10) NOT NULL UNIQUE,
+    number VARCHAR(20) NOT NULL UNIQUE,
     creation_date DATE NOT NULL
 );
 
@@ -53,7 +53,7 @@ CREATE TABLE employee_tb (
 CREATE TABLE account_tb (
     id VARCHAR PRIMARY KEY,
     number VARCHAR(20) NOT NULL UNIQUE,
-    balance NUMERIC(30,2) NOT NULL DEFAULT 0.00,
+    balance NUMERIC(30,2) NOT NULL,
     creation_date DATE NOT NULL,
     password VARCHAR NOT NULL UNIQUE,
     account_type VARCHAR(20) NOT NULL,
@@ -77,10 +77,10 @@ CREATE TABLE card_tb (
     cvv VARCHAR(3) NOT NULL UNIQUE,
     password VARCHAR NOT NULL UNIQUE,
     card_type VARCHAR(20) NOT NULL,
-    "limit" NUMERIC(30,2) NOT NULL DEFAULT 0.00,
+    "limit" NUMERIC(30,2) NULL,
 
-    agency VARCHAR(20) NOT NULL,
-    account VARCHAR(20) NOT NULL,
+    agency VARCHAR(20) NULL,
+    account VARCHAR(20) NULL,
 
     customer_id VARCHAR NOT NULL,
 
