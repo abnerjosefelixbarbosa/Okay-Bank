@@ -31,7 +31,7 @@ public class Account {
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private String id;
-	@Column(name = "number", length = 15, nullable = false, unique = true)
+	@Column(name = "number", length = 20, nullable = false, unique = true)
 	private String number;
 	@Column(name = "balance", precision = 30, scale = 2, nullable = false)
 	private BigDecimal balance;

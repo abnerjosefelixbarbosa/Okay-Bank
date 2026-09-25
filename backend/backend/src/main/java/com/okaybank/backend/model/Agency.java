@@ -26,7 +26,7 @@ public class Agency {
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private String id;
-	@Column(name = "number", length = 10, nullable = false, unique = true)
+	@Column(name = "number", length = 20, nullable = false, unique = true)
 	private String number;
 	@Column(name = "creation_date", nullable = false)
 	private LocalDate creationDate;

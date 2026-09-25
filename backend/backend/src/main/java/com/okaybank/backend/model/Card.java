@@ -43,11 +43,11 @@ public class Card {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "card_type", nullable = false)
 	private CardType cardType;
-	@Column(name = "limit", precision = 30, scale = 2, nullable = false)
+	@Column(name = "limit", precision = 30, scale = 2)
 	private BigDecimal limit;
-	@Column(name = "agency", length = 20, nullable = false)
+	@Column(name = "agency", length = 20)
 	private String agency;
-	@Column(name = "account", length = 20, nullable = false)
+	@Column(name = "account", length = 20)
 	private String account;
 	@ManyToOne
 	@JoinColumn(name = "customer_id", nullable = false)
